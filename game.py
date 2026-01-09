@@ -5,6 +5,12 @@ screen = pygame.display.set_mode((1280,720))
 clock = pygame.time.Clock()
 running = True
 dt = 0
+with open('players.txt') as players_raw:
+  players1 = int(players_raw.read)
+players_raw.close()
+with open('players.txt', "w") as players:
+  players.write(f'{players1 + 1}')
+players.close()
 
 player_location = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
