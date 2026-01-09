@@ -17,17 +17,17 @@ while running:
 
   pygame.draw.circle(screen, "blue", player_location, 40)
   
-  key = pygame.keys.get_pressed()
+  key = pygame.key.get_pressed()
   if key[pygame.K_w]:
-    player_location.y = -= 300 * dt
+    player_location.y -= 300 * dt
   if key[pygame.K_s]:
-    player_location.y = += 300 * dt
+    player_location.y += 300 * dt
   if key[pygame.K_a]:
-    player_location.x = -= 300 * dt
+    player_location.x -= 300 * dt
   if key[pygame.K_d]:
-    player_location.x = += 300 * dt
+    player_location.x += 300 * dt
     
-  pygame.display.flip
+  pygame.display.flip()
   dt = clock.tick(60) / 1000
 
-pygame.flip
+pygame.quit()
